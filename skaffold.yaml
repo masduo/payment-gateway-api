@@ -1,0 +1,17 @@
+apiVersion: skaffold/v2alpha2
+kind: Config
+build:
+  artifacts:
+  - image: payment-gateway-api
+  tagPolicy:
+    sha256: {}
+deploy:
+  helm:
+    releases:
+    - name: payment-gateway-api
+      chartPath: kube
+      valuesFiles:
+      - kube/values/development.yaml
+      # - .env.skaffold.yaml
+      values:
+        image: payment-gateway-api
