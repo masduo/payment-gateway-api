@@ -1,4 +1,4 @@
-# PaymentGateway
+# Payment Gateway API
 
 An API to enable merchants to offer a way for their shoppers to pay for their product.
 
@@ -21,16 +21,16 @@ Browse to https://localhost:5001/healthcheck or https://localhost:5001/swagger
 
 Install Docker Desktop and enable Kubernetes
 
-Install [skaffold](https://skaffold.dev/docs/install/) (tested on v1.11.0)
+Install [Skaffold](https://skaffold.dev/docs/install/) (tested on v1.11.0)
 
-Then run note that `port-forward` switch is to expose `NodePort` service on localhost
+Then run
 
-   ```sh
-   skaffold run
+```sh
+skaffold run
 
-   # for hot reloading
-   skaffold dev
-   ```
+# or with hot-reloading
+skaffold dev
+```
 
 Browse to http://localhost:5001/healthcheck or http://localhost:5001/swagger
 
