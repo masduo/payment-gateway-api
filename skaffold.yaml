@@ -9,9 +9,9 @@ deploy:
   helm:
     releases:
     - name: payment-gateway-api
-      chartPath: kube
+      chartPath: k8s
       valuesFiles:
-      - kube/values/development.yaml
+      - k8s/values/development.yaml
       # - .env.skaffold.yaml
       values:
         image: payment-gateway-api
